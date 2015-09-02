@@ -1,0 +1,23 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<form stripe-form="stripeCallback" name="checkoutForm">>
+    <input ng-model="number" placeholder="Card Number" 
+             payments-format="card" payments-validate="card" name="card" />
+    <input ng-model="expiry" placeholder="Expiration" 
+             payments-format="expiry" payments-validate="expiry"                
+             name="expiry" />
+    <input ng-model="cvc" placeholder="CVC" payments-format="cvc" payments-validate="cvc" name="cvc" />
+    <button type="submit">Submit</button>
+</form> 
+
+<div ng-if="checkoutForm.card.$invalid">
+    Error: invalid card number!
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <p>Angular Fullstack v2.0.13 |
+        <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
+         <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+  </div>
+</footer>
