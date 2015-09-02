@@ -18,9 +18,9 @@ angular.module('stripetestApp', [
     $locationProvider.html5Mode(true);
     $httpProvider.interceptors.push('authInterceptor');
   })
-  .run(function($window) {
-    $window.Stripe.setPublishableKey('pk_test_I8yPiMfGTHntqYDud6AL0uLf');
-  })
+  // .run(function($window) {
+  //   $window.Stripe.setPublishableKey('pk_test_I8yPiMfGTHntqYDud6AL0uLf');
+  // })
   .factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location) {
     return {
       // Add authorization token to headers
