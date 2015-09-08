@@ -5,7 +5,8 @@ angular.module('stripetestApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
-    }];
+    }
+    ];
 
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;

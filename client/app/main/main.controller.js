@@ -29,4 +29,14 @@ angular.module('stripetestApp')
             $http.post('/api/charges', { token: result.id });
         }
     };
+
+    $scope.getCustomer = function() {
+      $http.get('/api/getcustomer').success(function(data){
+            console.log("Customer Returned!!",data);
+        })
+        .error(function(data){
+
+        });
+
+    }
   });
