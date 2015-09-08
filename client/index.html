@@ -39,13 +39,16 @@
       ga('create', 'UA-XXXXX-X');
       ga('send', 'pageview');
     </script>
-
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script>
+            Stripe.setPublishableKey('pk_test_I8yPiMfGTHntqYDud6AL0uLf');
+    </script>
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
     <!-- build:js({client,node_modules}) app/vendor.js -->
-    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    
       <!-- bower:js -->
       <script src="bower_components/jquery/dist/jquery.js"></script>
       <script src="bower_components/angular/angular.js"></script>
@@ -78,9 +81,7 @@
           <script src="components/navbar/navbar.controller.js"></script>
           <!-- endinjector -->
           
-          <script>
-            Stripe.setPublishableKey('pk_test_I8yPiMfGTHntqYDud6AL0uLf');
-          </script>
+        
         <!-- endbuild -->
 </body>
 </html>
